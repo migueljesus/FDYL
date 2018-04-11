@@ -1,0 +1,15 @@
+<h1>Listado de categorias</h1>
+<table>
+  <tr>
+    <thead>
+      <th>Code 1</th>
+      <th>Code 2</th>
+    </thead>
+  </tr>
+  <% @categoria.each do |catg| %>
+  <tr>
+    <td><%= catg.cod_cate %></td>
+    <td><%= catg.nom_des %></td>
+  </tr>
+  <% end %>
+</table>
