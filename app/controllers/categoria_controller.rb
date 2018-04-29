@@ -16,6 +16,25 @@ class CategoriaController < ApplicationController
      end
    end
 
+   def edit
+      @categoria = Categorium.find(params[:id])
+   end
+
+   def update
+     @categoria = Categorium.find(params[:id])
+     if @categoria.update(categoria_params)
+       redirect_to categoria_path
+     else
+        render :edit
+      end
+   end
+
+   def delete
+     @categoria = Categorium.find(params[:id])
+     @categoria.destroy
+      redirect_to categoria_path
+   end
+
    private
    def categoria_params
    params.require(:categorium).permit(:cod_cate, :nom_des)

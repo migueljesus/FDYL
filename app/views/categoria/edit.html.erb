@@ -1,0 +1,13 @@
+<%= form_for @categoria do |f|  %>
+<div>
+  <%= f.label :cod_cate %>
+  <%= f.text_field :cod_cate %>
+</div>
+<div>
+  <%= f.label :nom_des %>
+  <%= f.number_field :nom_des %>
+</div>
+<div>
+    <%= f.submit %>
+</div>
+<% end %>

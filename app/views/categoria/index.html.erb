@@ -10,6 +10,12 @@
   <tr>
     <td><%= catg.cod_cate %></td>
     <td><%= catg.nom_des %></td>
+    <td>
+      <%= link_to "Mostrar" %>
+      <%= link_to "Editar", edit_categoria_path(catg) %>
+      <%= link_to "Eliminar", catg, method: :delete,  data: { confirm: "Desea eliminar este articulo"} %>
+
+  </td>
   </tr>
   <% end %>
 </table>
